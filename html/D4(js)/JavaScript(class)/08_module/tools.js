@@ -1,0 +1,1 @@
+export var data = 100;

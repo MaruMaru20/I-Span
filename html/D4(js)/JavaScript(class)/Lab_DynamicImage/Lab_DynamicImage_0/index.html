@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Image Lab</title>
+</head>
+<body>
+
+<p>...</p>
+<pre>
+  setTimeout; 設定時間  
+  clearTimeout; 設定停止時間
+  setInterval; 設定迴圈
+  clearInterval; 設定停止迴圈
+</pre>
+<!-- 
+TODO:
+請檢視以下這段 HTML，設計師用 <a> 與 <img> 做了
+一個圖片式的超連結，目前固定連往運動家隊。
+
+請想想看 ：如何讓訪客造訪本頁時，隨機看到不同的
+球隊圖案（超連結也要一併對應唷）。 
+-->
+
+    <a id="imgshref" href="http://oakland.athletics.mlb.com/" target="_blank">
+        <img src="images/oak.gif" id="imgs" border="0" class="randomImage"/>
+      </a>
+
+<script>
+    // const images = [
+    //     'images/chc.gif',
+    //     'images/oak.gif',
+    //     'images/sd.gif',
+    //     'images/was.gif'
+    // ];
+
+    // function loadRandomImage() {
+    //     const randomIndex = Math.floor(Math.random() * images.length);
+    //     const imgElement = document.getElementById('imgs');
+    //     imgElement.src = images[randomIndex];
+
+        
+    //     const imgLink = document.getElementById('imgshref');
+    //     imgLink.href = "https://example.com/" + images[randomIndex].split('/').pop(); // 根據實際需求修改
+    // }
+
+    
+    // setInterval(loadRandomImage, 1000);
+
+      // 定義圖片與對應網址的陣列
+
+      setImage();
+      
+    // GPT update 1 增加條件:停止計數
+    // function setImage() {
+
+    //   const images = [
+    //       { src: 'images/chc.gif', link: 'https://www.example.com/chc' },
+    //       { src: 'images/oak.gif', link: 'https://www.example.com/oak' },
+    //       { src: 'images/sd.gif', link: 'https://www.example.com/sd' },
+    //       { src: 'images/was.gif', link: 'https://www.example.com/was' }
+    //   ]; 
+    //   let count = 0;
+    //   const looptimes = 5;
+    //   function loadRandomImage() {
+    //       const randomIndex = Math.floor(Math.random() * images.length);
+    //       const imgElement = document.getElementById('imgs');
+    //       const imgLink = document.getElementById('imgshref');
+          
+    //       // 更新圖片和對應的連結
+    //       imgElement.src = images[randomIndex].src;
+    //       imgLink.href = images[randomIndex].link;
+
+    //       count++;
+
+    //         if (count > looptimes) {
+    //           clearInterval(imgID);
+    //         }
+    //   }
+
+
+  
+      
+    //   const imgID = setInterval(loadRandomImage, 1000);  
+      
+    
+    // }
+
+</script>
+<p>...</p>
+</body>
+</html>

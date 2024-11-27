@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="script.js" defer></script> -->
+    <title>Document</title>
+</head>
+<style>
+        @keyframes moveDownLeftRight {
+            0% {
+                bottom: 130%;
+                transform: translateX(-50%) scaleY(1) translateX(-50px) scale(1); /* 初始 */
+            }
+            50% {
+                bottom: 30%;
+                transform: translateX(-50%) scaleY(1) translateX(50px) scale(0.7); /* 到中间 */
+            }
+            53% { 
+                bottom: 40%;
+                transform: translateX(-50%) scaleY(-1) translateX(50px) scale(0.7);
+            }
+            100% {
+                bottom: -40%;
+                transform: translateX(-50%) scaleY(-1) translateX(-50px) scale(0); /* 最终 */
+            }
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+
+
+    .extra-background {
+        background: url("wave.gif") no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    .drow {
+        position: absolute;
+        bottom: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 500px;
+        object-fit: cover;
+        animation: moveDownLeftRight 7s ease-in-out forwards; /* 動畫屬性 */
+    }
+</style>
+<body style="background: rgb(91, 179, 230); ">
+    <div class="drow">
+        <img src="Arctic_Ocean_King_gif.webp" alt="">
+    </div>
+    <div class="extra-background"></div>
+    
+    <div id="report"></div>
+</body>
+</html>

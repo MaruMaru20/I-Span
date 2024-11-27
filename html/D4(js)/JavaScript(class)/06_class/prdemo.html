@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="debug"></div>
+
+
+    
+<script>
+
+    // -------------------------------------------------
+    // JSON
+    // [] {} , "" :
+    var obj = {
+        "firstName": "Wolfgang",
+        "lastName": "Chien"
+    };
+    // debug.innerHTML = obj.firstName + " " + obj.lastName;
+    debug.innerHTML =JSON.stringify(obj) + "<hr>";
+
+    var s = '{"firstName":"Wolfgang","lastName":"Chien"}';
+    var ps = JSON.parse(s);
+    debug.innerHTML += ps.lastName + "<hr>";
+    // -------------------------------------------------
+
+    function Box() {
+            this.color = 'black';
+            this.paint = function (value) {
+                this.color = value;
+            }
+        }
+        var objBox = new Box();
+        objBox.paint("Blue");
+        debug.innerHTML += objBox.color;
+        
+      
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 1px solid;
+              
+    }
+    th {
+        background-color: rgba(224, 223, 138, 0.459);
+    }
+</style>
+<body>
+    <!-- 列:tr 欄:td -->
+    <!-- thead tbody 方便js處理 -->
+    <table>
+    <thead>
+        <tr>
+            <th>人</th>
+            <th>事</th>
+            <th>物</th>
+        </tr>
+    </thead>
+
+        <tr>
+            <td><b>我</b></td>
+            <td><i>出門</i></td>
+            <td rowspan="2"><u>一瓶水</u></td>
+        </tr>
+  
+        <tr>
+            <td>那個誰</td>
+            <td>不知道</td>
+            <!-- <td>不知道</td> -->
+        </tr>
+    <tbody>
+            <tr>
+            <td>那個他</td>
+            <td colspan="2">不知道要幹嘛</td>
+            <!-- 合併儲存 -->
+            </tr>   
+    </tbody>
+        </table>
+
+        <hr>
+        <!-- <p>
+            <a target="_top" href="https://www.apple.com/tw" style="text-decoration: none;">APL</a>
+        </p>
+        <hr> -->
+
+
+
+        <iframe src="https://nowa.garden/" width="560" height="300" frameborder="0"></iframe>
+</body>
+</html>

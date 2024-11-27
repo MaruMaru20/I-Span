@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div id="debug"></div>
+    <script>
+        //  呼叫 A 存取 B
+        var nextNumber = (function () {  // a
+            var lastNumber = 0;
+            return function() {  // b
+                lastNumber++;
+                return lastNumber;
+            }
+        })();
+
+        var number = 0;
+        
+        number = nextNumber();
+        number = nextNumber();
+        number = nextNumber();
+        debug.innerText = number;
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <input type="button" id="test" value="click me to test your code" />
+    <div id="report"></div>
+
+<script>
+
+test.onclick = function () {
+    // 迭代器函數 filter
+    // -------------------
+    // 參考資料: 
+    // https://www.w3schools.com/jsref/jsref_filter.asp
+    // 
+    // 任務: 
+    // 請寫程式，將陣列內容是G數的項目挑出來成立一個新陣列
+    // 並且列出新陣列的內容
+
+    var data = [3, 0, 1, 8, 7, 2, 5, 4, 9, 6];
+
+    // 你的任務程式...
+// -------------------------------------------------------
+
+    // var dataList = data.filter(function (x) {
+        
+    //     return (x <= 3) ? true : false;
+
+    //     // if (x <= 3 )
+    //     //     return true;
+    //     // else
+    //     //     return false;
+
+    // });
+
+    // report.innerText = dataList;
+// -------------------------------------------------------
+    // var newarray = data.filter(a => a % 2 == 0)
+    // var newarray2 = data.filterout(a => a % 2 != 0)
+
+    // report.innerText = newarray.toString();
+    // report.innerText = newarray2.toString();
+
+    var dataList2 = data.filter(a => (a % 2 != 0) ? true : false );   
+    report.innerText = dataList2;
+// -------------------------------------------------------
+
+}  // end of test.onclick
+
+</script>
+
+</body>
+</html>
