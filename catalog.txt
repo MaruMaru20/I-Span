@@ -1,13 +1,26 @@
 --------------------------------------需-------求----------------------------------------------------------------------------
+ 大專題:遵守到第二正規化(建議)
+ 
+SQL:
  
  YT :sql server express 建置
+ (從DB setting Addons建立資料庫
+ 針對D11 !!!! 的部分加強練習)
+ 
 
-SQL 索引問題! 條件約束UNIQUE不符
+ 
+ 
+
+SQL 問題:
+ 條件約束UNIQUE不符
 資料列未經認可
 屬性 刪除      
-六日複習
 
-web IIS http http setting (1.0:2.0)
+
+
+
+
+HTML構想:
 
 img*2去背: 
 玩水人物 or 人
@@ -115,6 +128,8 @@ https://www.chainhao.com.tw/#
 --------------------------------課後-----------------------------------
 演算法:
 E:\I-span\html\D4(js)\JavaScript(class)\Demo\Notes.txt
+
+web IIS http http setting (1.0:2.0)
 
 
 
