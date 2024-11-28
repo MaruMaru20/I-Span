@@ -1,0 +1,162 @@
+
+HTML:
+
+Day.1 = http config
+
+Day.2 = html table div 
+
+Day.3 = CSS grid @media bootstrap
+
+--------------------------------NOTE-------------------------------------
+
+web server design :port (0-65535)
+
+http :port80
+https :port443
+
+http:
+path ? para(function)
+ 資料路徑 ? >功能參數
+ 
+ react,  vue (前端框架) 須加結束標籤
+-------------------------------------------------------------------------
+VSC:
+
+ctrl+n (new file)
+
+
+-------------------------------------------------------------------------
+HTML:
+
+1.br p 
+
+2.style basic
+
+3.<!-- -->
+
+4.inline block 
+
+<p> block                                                                           
+<label> inline 共享同一行
+
+5.hader 
+
+6.<hr>
+--------
+
+7.a href (http) 
+target=""(page cover or new):
+
+8.page2 abs & rel
+abs / 
+.. 上一層 
+
+9.img insert
+src > base64 for DB  REQ:if add defer?
+
+10. http ptl :
+setting : web server
+http1.1 多次連線 
+http2.0 單次連線
+
+11.ul ol 
+
+12.table css(basic)
+
+13.iframes
+
+14.bold italy underline
+
+15 
+
+boostrap
+
+
+
+span 排版標籤
+label 
+
+
+
+rgba : a : 透明度(0,1)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------
+1.form
+action="" (後端程式檔名)
+
+ input submit
+
+2.css (style.css)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
