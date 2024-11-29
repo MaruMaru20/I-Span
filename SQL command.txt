@@ -60,13 +60,14 @@ where UserInfo.uid = live.uid
 	and Userinfo.uid = 'A01'
 	
 二..------------------------------------外部連結
+
 from UserInfo left outer join Live 
 		on UserInfo.uid = live.uid
 	left join House
 		on Live.hid = House.hid
 	left join Phone
 		on House.hid = Phone.hid
-where UserInfo.uid = 'A09'
+where UserInfo.uid = 'A01'
 三..------------------------------------交叉連結 ~!~!~!~
 select *
 from UserInfo, Live
@@ -108,12 +109,12 @@ where 怎麼辣麼多$ > 1000
 
 select *
 from (
-select a.tel as '點維', sum(fee) as '怎麼辣麼多$', address as '地址'
+select a.tel as 'tel', sum(fee) as 'cost', address as 'address'
 from Bill as a, house, phone
 where a.tel = phone.tel and phone.hid = house.hid
 group by a.tel, address
 )as x
-where 怎麼辣麼多$ > 1000
+where cost > 1000
 
 !!!!.------------------------------------針對hid做群組運算
 有住人該怎麼做呢
@@ -200,7 +201,10 @@ where n = (
 .------------------------------------計算住最多人的屋子
 
 關聯:
+
+
  house address
+ 
  live  hid
 
 1.------------------------------------
