@@ -39,29 +39,10 @@ https://classroom.google.com/c/NzI5MjE1NDc5NDY3
 github:
 https://github.com/login
 
-bootstrap & tailwind: 
-1.
-https://getbootstrap.com/
-2.
-https://tailwindcss.com/
+chrome ctrl:
 
-chrome ctrl:chrome://flags/
+chrome://flags/
 
--------------------------------------------------------------------------------------
-網站範例:
-three.js   
-d3js
-
-RECORD!:
-
-http://211.75.192.96:8080/msit/
-
-
-
-GPT
-
-https://chatgpt.com/
-			
 FB
 			
 https://www.facebook.com/
@@ -69,6 +50,26 @@ https://www.facebook.com/
 GMAIL
 
 https://mail.google.com/mail/u/0/#inbox
+
+-------------------------------------------------------------------------------------JS
+網站範例:
+three.js   
+d3js
+
+bootstrap & tailwind: 
+1.
+https://getbootstrap.com/
+2.
+https://tailwindcss.com/
+
+RECORD!:
+
+http://211.75.192.96:8080/msit/
+
+-------------------------------------------------------------------------------------SQL
+
+
+
 ------------------------------------------------------------------------
 
 
@@ -105,24 +106,24 @@ https://legacy.netacad.com/portal/learning     48@gmail:A2@
 
 HTML:
 
-
-
 https://www.chainhao.com.tw/#
 
-
-sorce:
+時間日期參數SQL
+https://learn.microsoft.com/zh-tw/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver16
 
 W3C
 
 MDN
 
 ----------------------------------------------------------------------
-
+課程:
 
 朱克剛(html) 研蘋果:   msit62: msit3579
 https://www.chainhao.com.tw/#
 
 錢達智(java script))
+
+朱克剛(SQL)
 
 
 --------------------------------課後-----------------------------------
