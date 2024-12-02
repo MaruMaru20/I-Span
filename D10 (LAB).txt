@@ -29,7 +29,7 @@ amount int,
 price int,
 total int,
 memo nvarchar(50),
-initDate datetime
+initDate datetime2 default getdate()
 );
 
 
