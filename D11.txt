@@ -1,23 +1,244 @@
-D11.
-NULL 無法運算只能檢查
-Q:何時檢查?
-A:只要資料表有勾 允許NULL 
+------------------------------------------SQL command 
+切片(從第1個ˋ後拿掉一個)
+substring = (splice 1, 1)
+將重複的值拿掉
+distinct substring = (splice)
+
+可下常數select '  abc   ' 
+
+長度查詢len('  abc  ')
+
+頭尾去空白trim  l.rtrim
+
+時間戳
+epoch time:
+ (int型態)(1970 / 1 / 1 00:00)(NO UTC) / 
+ 
+ select datediff(second,'1970/1/1 0:0:0', getutcdate())
+ 還原時間 前端換
+ select dateadd(second,1733127523,'1970/1/1 0:0:0') + 8 / 24
+ unix time / 
+ timestamp(需確認)
 
 
-                 在   改成
-select *, isnull(cname, '') from DBsheet
-where form is NULL
------------------------------------------------------------
-連結>>>inner join | (left,right) outer join 
-Q:何時使用外部連結
-A:join沒有把握就用 外部連結
------------------------------------------------------------
+日期:
+select dateadd(day, 2912837, getdate())
+
+select datediff(day,'9999/12/31', getdate())
+
+select datediff(day,'9999/12/31', getdate()) from bill
+
+
+------------------------------------------ case when
+---------------------------1.設計函數 帳單金額打9折
+
+select tel, sum(fee) as sum_fee
+from bill
+group by tel
+
+---------------------------2.包一層巢狀
+
+select * 
+from (
+	select tel, sum(fee) as sum_fee
+	from bill
+	group by tel
+)as a
+
+---------------------------3.設計 case when end
+
+select tel, sum_fee,
+	case
+		when sum_fee > 1500 then sum_fee *0.8
+		when sum_fee > 1000 then sum_fee *0.9
+			else sum_fee
+		end
+from (
+	select tel, sum(fee) as sum_fee
+	from bill
+	group by tel
+)as a
+---------------------------other iif()
+select tel, sum_fee,
+	iif(sum_fee > 1500, sum_fee * 0.8, iif(sum_fee > 1000, sum_fee * 0.9, sum_fee)) as discount
+	from (
+	select tel, sum(fee) as sum_fee
+	from bill
+	group by tel
+)as a
+------------------------------------------順序
+
+where 要放group 前面 having 要放group by 後面
+
+select * from(
+	select tel, sum(fee) as sum_fee
+	from bill
+	group by tel
+) as a
+where sum_fee >= 1000
+
+select tel, sum(fee) as sum_fee
+from bill
+group by tel
+having sum(fee) >= 1000
+
+------------------------------------------找重複
+---------------------------me,
+select *
+from bill
+
+select fee, count(fee)
+from bill
+group by fee
+---------------------------thacher
+select fee, count(*)
+from bill
+group by fee
+having count (*) > 1
+
+群E組N運D算
+------------------------------------------異動資料
+
 
+MD5 sha1 不安全密碼表
+
+hashbytes  雜湊
+
+convert 轉型
+
+--刪除
+delete from (丟垃圾桶)
+
+truncate table (估掰~)
+
+
+select * into new_table from userinfo 複製資料
+
+for json path, include_null_values 轉成json (給前端做)fetch function
+
+圖檔插入
+1.設計
+select * 
+from openrowset(bulk N'C:\\Users\\User\\Desktop\\000.png', single_blob
+2.插入~
+insert into HeadPhoto (uid, photo) 
+values ('A01', 
+(select * from openrowset(bulk N'C:\\Users\\User\\Desktop\\000.png', single_blob) as tmp)
+)
+
+------------------------------------------密碼加密
+1.
+select hashbytes('sha2_512','1234')
+2.轉換
+select convert(varchar(200),hashbytes('sha2_512','1234'),2)
+3.最大值 128
+        查    轉       轉值          雜湊     密碼型態    密碼  值
+select len(convert(varchar(200),hashbytes('sha2_512','1234'),2))
+select* from userinfo
+update userinfo set password = convert(varchar(200), hashbytes('sha2_512','1234'), 2) where cname = 'Tom'
+
+select* from userinfo
+
+------------------------------------------複製資料
+
+
+------------------------------------------生日? date格式
+select * from (
+	select datediff(year,'2024/1/1', birthday)as d from UserInfo)as tmp
+where d < 1 
+
+select *, floor(datediff(day,birthday,getdate())/365.25) as age from userinfo
+
+日期
+select datepart(year,getdate())
+
+select format(getdate(),'d,dd,yyyy,tttt,h點')
+西元轉民國
+1.
+select datepart(year,getdate()) -1911, '年'
+select format(getdate(),'M月d日')
+2.
+select concat(
+	'民國',
+	datepart(year,getdate()) -1911, 
+	'年',
+	format(getdate(),'M月d日')
+)
+	
+星期1-7
+select datepart(weekday , dateadd(day,-1,getdate()))
+
+------------------------------------------每季報表?
+---------------------------1.me
+SELECT 
+    
+    DATETRUNC(QUARTER, bill.dd),
+    SUM(fee) AS total_sales
+FROM bill
+group by bill.dd  !!!!!!!!!!!!(改成DATETRUNC(QUARTER, dd)OKK)
+order by  DATETRUNC(QUARTER, dd)
+
+---------------------------2.teacher
+1.
+select datepart(quarter,dd) as q, sum(fee) as sum_fee
+from bill 
+where datepart(year,dd) = 2019
+group by datepart(quarter,dd) 
+2.缺少一季補
+from bill 
+where datepart(year,dd) = 2019
+group by datepart(quarter,dd) 
+--order by datepart(quarter,dd)
+union all
+select 1,0
+union all
+select 2,0
+union all
+select 3,0
+union all
+select 4,0
+
+
+3.
+select q , sum(sum_fee) from(
+select datepart(quarter,dd) as q, sum(fee) as sum_fee
+from bill 
+where datepart(year,dd) = 2019
+group by datepart(quarter,dd) 
+--order by datepart(quarter,dd)
+union all
+select 1,0
+union all
+select 2,0
+union all
+select 3,0
+union all
+select 4,0
+)as tmp
+group by q
+
+半年
+SELECT 
+    FLOOR(DATEPART(MONTH, dd) / 7.0) AS half, 
+    SUM(fee) AS total_fee
+FROM bill
+WHERE DATEPART(YEAR, dd) = 2019
+GROUP BY FLOOR(DATEPART(MONTH, dd) / 7.0)
+ORDER BY half;
+
+'2024/12/2 15:23:0'
+'2024-12-02 15:23:00' ISO8601
+'2024-12-02 15:23:00+08:00' UTC
+
+查詢資料 後須補時間
+select * from bill 
+where dd between '2019/1/1' and '2019/3/31 23:59:59.999'
+
+查5日內資料
+select * from bill 
+--where datediff(day,dd,getdate()) <=5
+where dd between getdate() -5 and getdate()
 
-■ 列出每個人有多少支電話？
-■ 列出每個人有多少地方住？
-■ 列出那間屋子住最多人？
-■ 計算空屋率。
 
 
 
@@ -26,93 +247,3 @@ A:join沒有把握就用 外部連結
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-('王大明' '李大媽')
