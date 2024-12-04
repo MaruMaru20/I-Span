@@ -1,0 +1,36 @@
+查看鎖的狀態
+SELECT 
+    request_session_id AS SessionID,
+    resource_type AS ResourceType,
+    resource_description AS ResourceDescription,
+    resource_database_id AS DatabaseID,
+    request_mode AS LockMode,
+    request_status AS LockStatus
+FROM 
+    sys.dm_tran_locks;
+
+
+=================================
+
+
+SELECT 
+    r.session_id,
+    r.blocking_session_id,
+    r.wait_type,
+    r.wait_time,
+    r.wait_resource,
+    r.status,
+    r.command,
+    s.login_name,
+    s.host_name,
+    s.program_name
+FROM 
+    sys.dm_exec_requests r
+JOIN 
+    sys.dm_exec_sessions s ON r.session_id = s.session_id
+WHERE 
+    r.blocking_session_id <> 0;
+
+
+================================
+exec sp_who2  --看整個系統資料
