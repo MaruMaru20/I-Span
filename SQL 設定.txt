@@ -1,0 +1,8 @@
+SQL sever 2022  (the red one)
+SQL EXPRESS > TCP/IP 啟用
+			> TCP/IP >IP >TPC 通訊 1433
+重新啟用
+
+
+SQL account
+!!!  sa
