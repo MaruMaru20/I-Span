@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX 动态内容加载示例</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    /* 顶部导航栏 */
+    #top-nav {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    #top-nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-block;
+    }
+    #top-nav a:hover {
+      background-color: #f4a261;
+    }
+    #top-nav img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    /* 主内容区域 */
+    #main-content {
+      margin: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+    /* 页面内容 */
+    #content-area {
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    /* 注册表单样式 */
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #f4a261;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #e76f51;
+    }
+    /* 简单样式 */
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <div id="top-nav">
+    <a href="#" id="home-link"><img src="images/home-icon.png" alt="Home">首页</a>
+    <a href="#" id="about-link"><img src="images/about-icon.png" alt="About">关于</a>
+    <a href="#" id="services-link"><img src="images/services-icon.png" alt="Services">服务</a>
+    <a href="#" id="contact-link"><img src="images/contact-icon.png" alt="Contact">联系我们</a>
+    <a href="#" id="register-link"><img src="images/register-icon.png" alt="Register">注册</a>
+    <!-- 可以继续添加更多导航项 -->
+  </div>
+
+  <!-- 主内容区域 -->
+  <div id="main-content">
+    <div id="content-area">
+      <h1>欢迎访问我们的站点！</h1>
+      <p>点击上面的菜单进行页面导航。</p>
+    </div>
+  </div>
+
+  <!-- 注册表单 (隐藏) -->
+  <div id="register-form" class="hidden">
+    <h2>注册</h2>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="username">用户名</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">电子邮件</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">密码</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">注册</button>
+      </div>
+    </form>
+    <p id="register-message"></p>
+  </div>
+
+  <script>
+    // 页面内容加载函数
+    function loadPage(page) {
+      fetch(`${page}`)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('content-area').innerHTML = data;
+        })
+        .catch(error => {
+          document.getElementById('content-area').innerHTML = '<p>加载失败，请稍后再试。</p>';
+        });
+    }
+
+    // 点击顶部导航时加载对应页面
+    document.getElementById('home-link').addEventListener('click', () => loadPage('home.html'));
+    document.getElementById('about-link').addEventListener('click', () => loadPage('nav.html')); // 这里更改为 nav/index.html
+    document.getElementById('services-link').addEventListener('click', () => loadPage('services.html'));
+    document.getElementById('contact-link').addEventListener('click', () => loadPage('contact.html'));
+    document.getElementById('register-link').addEventListener('click', () => {
+      document.getElementById('content-area').innerHTML = document.getElementById('register-form').innerHTML;
+    });
+
+    // 注册表单提交处理
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+      event.preventDefault();  // 阻止表单的默认提交行为
+
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // 模拟注册请求
+      setTimeout(() => {
+        document.getElementById('register-message').innerText = `注册成功！用户名：${username}`;
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>

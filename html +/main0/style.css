@@ -58,7 +58,7 @@ form input {
 #ent {
     position: absolute; 
     bottom: 10%; 
-    left: 50%; 
+    left: 48%; 
     transform: translateX(-50%); 
     width: 100%;
     max-width: 500px; 
@@ -106,3 +106,45 @@ div .icon {
     justify-content: center;
 }
 
+.pro-1 {
+    position: absolute; 
+    bottom: 20%; 
+    left: 80%; 
+    transform: translateX(-50%); 
+    width: 100%;
+    max-width: 500px; 
+}
+
+.par {
+    display: none; /* 初始隱藏元素 */
+    opacity: 0; /* 初始透明 */
+    animation: fadeInUp 5s ease forwards, moveUp 4s 2s forwards; /* fadeInUp後接moveUp動畫 */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* 初始位置向下偏移30px */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 最終回到原位置 */
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0); /* 初始位置 */
+    }
+    100% {
+        transform: translateY(-600vh); /* 向上移動直到超出視窗 */
+    }
+}
+
+/* 讓元素顯示出來並觸發動畫 */
+.par.show {
+    display: block; /* 顯示元素 */
+}
+
+
+  

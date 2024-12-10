@@ -1,28 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('submitButton').addEventListener('click', function(event) {
-        
-        event.preventDefault();
-        
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        
-        if (username === '' || password === '') {
-            alert('雖然這個是做好玩的,但是還是要填東西ㄟ～～～ ლ(˙ ｖ ˙)უ');
-        } else {
-            window.location.href = '/page/indexH.html';
-        }
-    });
+document.getElementById('submitButton').addEventListener('click', function (event) {
+    event.preventDefault(); // 防止默認的a標籤跳轉行為
+
+    // 顯示圖片並觸發動畫
+    var par = document.querySelector('.par');
+    par.style.display = 'block'; // 顯示元素
+    par.classList.add('show'); // 添加show類來觸發動畫
+
+    // 在2秒後跳轉
+    setTimeout(function() {
+        window.location.href = "https://www.google.com/"; // 轉跳頁面
+    }, 2580); // 設置延遲2秒
 });
-
-
-const passwordField = document.getElementById('password');
-const togglePasswordButton = document.getElementById('Pwhide');
-
-togglePasswordButton.addEventListener('click', function() {
-    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordField.setAttribute('type', type);
-    // Toggle icon
-    togglePasswordButton.name = togglePasswordButton.name === 'lock-closed' ? 'lock-open-outline' : 'lock-closed';
-});
-
-
