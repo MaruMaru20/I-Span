@@ -8,6 +8,6 @@ document.getElementById('submitButton').addEventListener('click', function (even
 
     // 在2秒後跳轉
     setTimeout(function() {
-        window.location.href = "https://www.google.com/"; // 轉跳頁面
+        window.location.href = "nav/nav.html"; // 轉跳頁面
     }, 2580); // 設置延遲2秒
 });

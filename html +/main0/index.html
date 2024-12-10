@@ -74,35 +74,34 @@
         const firefly = document.createElement('div');
         firefly.classList.add('firefly');
         
-        // 随机决定萤火虫从屏幕外的哪个方向进入
         const position = Math.random();
         if (position < 0.25) {
-          // 从顶部进入
+
           firefly.style.top = `${-10}vh`;
           firefly.style.left = `${Math.random() * 100}vw`;
         } else if (position < 0.5) {
-          // 从底部进入
+
           firefly.style.top = `${110}vh`;
           firefly.style.left = `${Math.random() * 100}vw`;
         } else if (position < 0.75) {
-          // 从左侧进入
+
           firefly.style.top = `${Math.random() * 100}vh`;
           firefly.style.left = `${-10}vw`;
         } else {
-          // 从右侧进入
+
           firefly.style.top = `${Math.random() * 100}vh`;
           firefly.style.left = `${110}vw`;
         }
         
-        // 随机动画延迟
+
         firefly.style.animationDelay = `${Math.random() * 5}s, ${Math.random() * 10}s`;
 
         container.appendChild(firefly);
       }
     }
 
-    // 调用函数生成萤火虫
-    createFireflies(50); // 生成 50 个萤火虫
+
+    createFireflies(50);  //50隻蟲蟲
 
 
 
