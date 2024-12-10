@@ -1,0 +1,149 @@
+D13.transaction交易
+
+查詢 S lock
+異動 X lock
+
+交易需滿足 ACID
+
+死結 U 鎖可解
+
+S 與 U 可共存,但只能上一個 U
+------------------------------------------------------- 鎖~~~~~~~~
+查詢鎖:
+1.
+CREATE VIEW lockinfo AS
+SELECT
+    object_name(b.object_id) as TableName, 
+    resource_type, 
+    request_mode,
+    request_session_id
+FROM sys.dm_tran_locks as a join sys.partitions as b 
+    on a.resource_associated_entity_id = b.hobt_id
+2.
+ select * from lockinfo
+ 
+3. 設定逾時
+set lock_timeout 5000
+
+4.刪除ID 
+kill 57
+-------------------------------------------------------賣票~ 超賣
+1.-----------------------------
+drop procedure if exists buy1
+go
+create procedure buy1
+as
+begin 
+	declare @n int;
+	select @n = quantity from products where pid = 1;
+	waitfor delay '00:00:10'  --PART2.wait 10sec
+	if @n > 0
+	begin
+		update products set quantity = quantity -1 where pid = 1
+		select 'success' as status
+	end 
+	else
+	begin
+		select 'sold out' as status
+	end
+END;
+2..----------------------------- 解決超賣
+drop procedure if exists buy2
+go
+create procedure buy2
+as
+begin 
+	declare @n int;
+	----解決 先改再查
+	begin transaction  --3
+	update products set quantity = quantity -1 where pid = 1 --2
+	----解決 先改再查
+	select @n = quantity from products where pid = 1;
+	waitfor delay '00:00:10'  --PART2.wait 10sec
+	if @n >= 0
+	begin
+		commit  --3
+		select 'success' as status
+	end 
+	else
+	begin
+		rollback  --3
+		select 'sold out' as status
+	end
+END;
+
+
+2-1..-------------SQL sever專---------------- 解決超賣2
+(不改變交易隔離等級就讓讀寫分離) (臨界區間)
+
+drop procedure if exists buy3
+go
+create procedure buy3
+as
+begin 
+	declare @n int;
+	begin tran
+		select @n = quantity from products with(updlock) where pid = 1;
+		waitfor delay '00:00:10'  --PART2.wait 10sec
+		if @n > 0
+		begin
+			update products set quantity = quantity -1 where pid = 1
+			select 'success' as status
+		end 
+		else
+		begin
+			select 'sold out' as status
+		end
+
+	commit
+END;
+
+指令---------------------
+
+update products set quantity =1 where pid = 1
+exec buy2
+
+select * from products
+-------------------------------------------------------交易der隔離等級
+read uncommitted
+repeatable read  第一次讀到啥第二次就讀到啥
+
+begin transaction
+	update userinfo set cname = 'Toy' where uid = 'A06'
+	waitfor delay '00:00:10'
+	rollback	
+	
+	set transaction isolation level read uncommitted
+begin tran
+	select 'r1', * from userinfo where uid = 'A06'  -----dirty read
+	waitfor delay '00:00:10'
+	select 'r2', * from userinfo where uid = 'A06'	-----rollback
+	commit
+	在committed 的情況下不上鎖 會加快效能 但會變成髒讀取
+select 'r1', * from userinfo with(nolock) where uid = 'A06'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

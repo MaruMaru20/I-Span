@@ -1,0 +1,257 @@
+---------------------------D10.--------------------------------
+查表:
+select *
+from UserInfo
+-- where cname = '王大明' or cname = '李大媽'
+-- where cname in ('王大明', '李大媽')
+-- where cname <> '王大明' and cname <> '李大媽' 
+-- where cname not in  ('王大明', '李大媽') or cname is NULL
+
+
+
+-- select * from bill 
+
+-- where fee < 400 or fee > 700
+-- where fee not between 400 and 700  
+
+select *, isnull(cname, '') from UserInfo
+where cname is NULL
+---------------------------D11.排序--------------------------------
+
+asc 順向排序(預設) desc 逆向排序
+order by :
+可接兩個欄位 照中文筆畫排序SQL sever )
+其他資料庫 UTF-8 (需要轉定序) 英 數 正確 其餘亂碼  
+
+
+select *
+from Bill
+order by x asc, y
+---------------------------D11.關於效能--------------------------------
+select uid, cname
+from UserInfo
+where cname <> '王大明' and cname is not NULL
+where isnull(cname,'') <> '' --不要這樣下 效能ww  欄位套上函數=慢到爛
+---------------------------D11.(正規化)合併--------------------------------
+合併正規化資料表:
+若資料分散在一堆表格 需先合併後查詢
+先查ER 再挑選要的資料
+inner join(內部連結)
+left (outter可省略) join 由左邊比對右邊資料(左側外部連結)
+
+
+
+一.------------------------------------內部連結
+select *     inner可省略
+from UserInfo inner join Live 
+		on UserInfo.uid = live.uid
+	join House
+		on Live.hid = House.hid
+	join Phone
+		on House.hid = Phone.hid
+where UserInfo.uid = 'A01'
+
+
+select * (cname, address, 嚴格一點)
+from UserInfo, Live, House, Phone
+where UserInfo.uid = live.uid
+	and live.hid = house.hid
+	and house.hid = phone.hid
+	and Userinfo.uid = 'A01'
+	
+二..------------------------------------外部連結
+
+from UserInfo left outer join Live 
+		on UserInfo.uid = live.uid
+	left join House
+		on Live.hid = House.hid
+	left join Phone
+		on House.hid = Phone.hid
+where UserInfo.uid = 'A01'
+三..------------------------------------交叉連結 ~!~!~!~
+select *
+from UserInfo, Live
+
+select *
+from UserInfo, Live, House, Phone
+where UserInfo.uid = live.uid and House.hid = Phone.hid 條件沒下足
+
+四..------------------------------------full join = union 左側外部+右側外部
+select *
+from UserInfo full join live
+		on userinfo.uid = live.uid
+		
+union     
+union all 重複也會留
+---------------------------D11.正規化--------------------------------
+正規化:減少資料重複性 後續容易維護
+UNF 要有主索引
+1NF 設個UID之類的(一個格子只能放一種資料)
+---------------------------D11.群組運算--------------------------------
+exm:
+select sum(fee)
+from Bill
+
+sum() 總和 count() 總數 avg() 平均 max() 最大 min() 最小 stdev() 標準差
+
+群組:group by
+.------------------------------------
+         別名 : as
+select Bill.tel as '電話', sum(fee) as '怎麼辣麼多$', address as '地址'
+from Bill, house, phone
+where Bill.tel = phone.tel and phone.hid = house.hid
+group by Bill.tel, address
+!!!!.------------------------------------巢狀查詢 (子查詢)
+select *
+from ()as x
+where 怎麼辣麼多$ > 1000
+
+
+select *
+from (
+select a.tel as 'tel', sum(fee) as 'cost', address as 'address'
+from Bill as a, house, phone
+where a.tel = phone.tel and phone.hid = house.hid
+group by a.tel, address
+)as x
+where cost > 1000
+
+!!!!.------------------------------------針對hid做群組運算
+有住人該怎麼做呢
+select count(*) as n from(
+	select count(hid) as n
+	from live
+	group by hid
+)as x
+
+沒住人該怎麼做呢
+
+.------------------------------------空屋1
+select count(*) - (
+	select count(*) as n from(
+		select count(hid) as n
+		from live
+		group by hid
+	)as x
+)as '空屋'
+from House
+
+.------------------------------------空屋2
+step1.查詢資料
+select *
+from House left join live
+	on House.hid = live.hid
+
+step2.設定條件
+select count(*) as '空屋'
+from House left join live
+	on House.hid = live.hid
+where uid is null
+
+.------------------------------------計算空屋率
+select (
+	select count(*) as '空屋'
+	from House left join live
+		on House.hid = live.hid
+	where uid is null
+) /cast((select count(*)  from house) as float)as 'rate'
+
+								
+
+增加兩項資料在house後
+                            字串相加concat
+							select concat('a','b','c','d',null,123)
+							-- abcd123
+
+select concat (round((
+	select count(*) as '空屋'
+	from House left join live
+		on House.hid = live.hid
+	where uid is null
+)
+/cast((select count(*)  from house) as float), 3)* 100, '%') as 'rate'
+
+---------------------------D11.儲存SQL command--------------------------------
+儲存 create view vw_vacancy_rate as
+檢視 select * from vw_vacancy_rate
+
+select concat (round((
+	select count(*) as '空屋'
+	from House left join live
+		on House.hid = live.hid
+	where uid is null
+)
+/cast((select count(*)  from house) as float), 3)* 100, '%') as 'rate'
+---------------------------D11.!!!!極端值查詢-------------------------------
+select *
+from (
+	select tel, sum(fee)as n
+	from bill
+	group by tel
+) as x
+where n = (
+	select top 1 n
+	from (
+		select tel, sum(fee) as n
+		from bill
+		group by tel
+	) as x 
+	order by n
+)
+.------------------------------------計算住最多人的屋子
+
+關聯:
+
+
+ house address
+ 
+ live  hid
+
+1.------------------------------------
+select address, n from (
+	select hid, count(*) as n
+	from live
+	group by hid
+) as x join house
+	on x.hid = house.hid
+where n = (
+	select max(n) as n from (
+		select count(*) as n
+		from live
+		group by hid
+	) as x
+)
+2.------------------------------------
+select address, n
+from (
+	select hid, count(*)as n
+	from live
+	group by hid
+) as x join house
+	on x.hid = house.hid
+where n = (
+	select top 1 n
+	from (
+		select count(*)as n
+		from live
+		group by hid
+	) as x 
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

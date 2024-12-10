@@ -1,0 +1,91 @@
+建置資料表:  參考>https://ithelp.ithome.com.tw/m/articles/10214308
+
+
+
+識別規格SQL Server 語法  
+IDENTITY(1,1)
+
+後續加上PK
+alter table Customers add primary key (id)
+
+刪除資料
+drop table 資料名稱
+
+刪除資料表
+delete from 資料表名稱
+---------------------------------TABLE CREATE----------------------------------
+
+create table Customers (id int identity(1,1) primary key,name nvarchar(51),address nvarchar(51),inirDate datetime)
+
+create table Products (id int identity(1,1) primary key, name nvarchar(51), price int, initDate datetime)
+
+create table orders (id int identity(1,1) primary key, customerID int, total int, initDate datetime)
+--規範 易讀
+create table Orderdetiail 
+(id int identity(1,1) primary key,
+orderID int,
+productID int,
+amount int,
+price int,
+total int,
+memo nvarchar(50),
+initDate datetime2 default getdate()
+);
+
+
+
+
+---------------------------------資料表建立-------------------------
+例:
+create table orders (
+id int identity(1,1) primary key, 
+customerID int, 
+total int, 
+initDate datetime)
+
+
+insert into 資料表名稱
+values (1,100,getdate()),
+(1,100,getdate());
+
+編組時字串需加引號
+INSERT INTO Customers (name, tel, address, initDate)
+VALUES 
+    ('apple', '123456789', 'USA', GETDATE()),
+    ('asus', '987654321', 'Taiwan', GETDATE()),
+    ('sony', '52012345', 'Japan', GETDATE()),
+    ('samsung', '99999', 'Korea', GETDATE()),
+    ('lg', NULL, NULL, GETDATE());
+
+
+
+欄位1設定自動填入所以跳過
+customerID = 1
+total int = 100
+initDate = getdate()
+---------------------------------查詢資料表-------------------------
+參考
+https://ithelp.ithome.com.tw/m/articles/10219497
+
+Q.想查price
+1.查詢總表
+2.加入查詢平均值
+,(select avg(price) from products) as avgs
+3.下條件
+where price > (select avg(price) from products)
+
+
+1.
+select *
+from products
+
+2.select * ,
+(select avg(price) from products) as avgs 
+from products 
+
+
+3.select * ,
+(select avg(price) from products) as avgs 
+from products 
+where price < (select avg(price) from products)
+

@@ -1,0 +1,79 @@
+DROP PROCEDURE IF EXISTS register;
+GO
+
+CREATE PROCEDURE register
+    @uid NVARCHAR(50),         
+    @cname NVARCHAR(100),      
+    @hid INT = NULL,           
+    @address NVARCHAR(255) = NULL, 
+    @password NVARCHAR(50) = NULL 
+AS
+BEGIN
+
+    BEGIN TRANSACTION;
+
+    BEGIN TRY
+
+
+        IF EXISTS (SELECT 1 FROM userinfo WHERE uid = @uid)
+        BEGIN
+            SELECT '帳號已存在' as message;
+            ROLLBACK; 
+            RETURN;
+        END
+
+
+        IF @hid IS NULL
+        BEGIN
+            SELECT @hid = ISNULL(MAX(hid), 0) + 1 FROM house;
+        END
+
+
+        IF @address IS NOT NULL
+        BEGIN
+            IF EXISTS (SELECT 1 FROM house WHERE hid = @hid)
+            BEGIN
+                UPDATE house
+                SET address = @address
+                WHERE hid = @hid;
+            END
+            ELSE
+            BEGIN
+                INSERT INTO house (hid, address)
+                VALUES (@hid, @address);
+            END
+        END
+        ELSE
+        BEGIN
+
+            IF NOT EXISTS (SELECT 1 FROM house WHERE hid = @hid)
+            BEGIN
+                INSERT INTO house (hid, address)
+                VALUES (@hid, NULL);
+            END
+        END
+
+        IF @password IS NULL
+        BEGIN
+            SET @password = @uid;
+        END
+
+
+        INSERT INTO userinfo (uid, password, cname)
+        VALUES (@uid, @password, @cname);
+
+
+        INSERT INTO live (hid, uid)
+        VALUES (@hid, @uid);
+
+        COMMIT;
+
+        SELECT '註冊成功!' AS message;
+    END TRY
+    BEGIN CATCH
+
+        ROLLBACK;
+        SELECT ERROR_MESSAGE() AS error_message;
+    END CATCH
+END;
+GO
