@@ -2,7 +2,7 @@
         {
             Console.Write("How many? ：");
             double quantity = double.Parse(Console.ReadLine());
-            Console.Write("Price ：");
+            Console.Write("Each price ：");
             double price = double.Parse(Console.ReadLine());
 
             double total = quantity * price;
