@@ -1,13 +1,12 @@
         static void discount()
         {
-            
             Console.Write("How many? ：");
             double quantity = double.Parse(Console.ReadLine());
             Console.Write("Price ：");
             double price = double.Parse(Console.ReadLine());
 
-            double total = quantity * price;                      
-            double discount = quantity >= 20 ? 0.9 : (quantity >= 10 ? 0.95 : 1.0);
+            double total = quantity * price;
+            double discount = quantity >= 110 ? 0.8 : (quantity >= 20 ? 0.9 : (quantity >= 10 ? 0.95 : 1.0));
 
             total *= discount;
 
@@ -16,8 +15,9 @@
             gogo = gogo.TrimEnd('0').TrimEnd('.'); //先想到TRIM 失敗
 
 
-            double per = (1 - discount) *100;
+            double per = (1 - discount) * 100;
 
             Console.WriteLine($"{gogo}折 總價：{total:F2}");
             Console.WriteLine($"{per}%  total price is：{total:F2}");
+            // any other way?
         }
