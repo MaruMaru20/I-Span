@@ -1,0 +1,18 @@
+        static void P12_discount() 
+        {
+            //10杯飲料95折 20杯9折
+            //100盃也可以
+            //飲料均一價
+
+            //show:
+            //num=10
+            //Pri=10
+            //discount 5% totalPrice = $
+
+            Console.Write("input total : ");
+            string num = Console.ReadLine();
+
+            Console.Write("input Price : ");
+            string price = Console.ReadLine();
+            double a = Convert.ToDouble(num);
+            double b = Convert.ToDouble(price);
