@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\bin\Debug\Lab241225_List.exe.config
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\bin\Debug\Lab241225_List.exe
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\bin\Debug\Lab241225_List.pdb
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\obj\Debug\Lab241225_List.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\obj\Debug\Lab241225_List.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\obj\Debug\Lab241225_List.exe
+C:\Users\User\Desktop\01\Lab241225_List\Lab241225_List\obj\Debug\Lab241225_List.pdb

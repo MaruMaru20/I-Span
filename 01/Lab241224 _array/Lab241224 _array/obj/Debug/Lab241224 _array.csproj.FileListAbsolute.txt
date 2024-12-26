@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\bin\Debug\Lab241224 _array.exe.config
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\bin\Debug\Lab241224 _array.exe
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\bin\Debug\Lab241224 _array.pdb
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\obj\Debug\Lab241224 _array.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\obj\Debug\Lab241224 _array.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\obj\Debug\Lab241224 _array.exe
+C:\Users\User\Desktop\01\Lab241224 _array\Lab241224 _array\obj\Debug\Lab241224 _array.pdb
