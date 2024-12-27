@@ -6,9 +6,9 @@
  
 
 
+------------------------------------------------------------------------------------- SQL 
 
-
-
+Data Source=DESKTOP-AVM54SB\SQLEXPRESS;Integrated Security=True;Trust Server Certificate=True
 
 
 

@@ -1,0 +1,242 @@
+-- 115 挑選 所有 產品資料，並用產品名稱排序
+
+select * from Products
+
+order by ProductName
+
+-- 120 挑選 指定欄位：ProductID, ProductName, UnitPrice
+
+select ProductID,ProductName,UnitPrice from Products
+ 
+
+
+-- 125 延續上題，在挑選資料時，請將欄位名稱改成以中文 產品編號, 產品名稱, 單價 顯示
+
+select ProductID as '產品編號',ProductName as '產品名稱',UnitPrice as '單價' 
+
+from Products
+ 
+ 
+-- 140 挑選 (庫存量+在途數)低於再訂購量 的產品資料
+
+select * from Products
+
+where (UnitsInStock+UnitsOnOrder) < ReorderLevel
+ 
+ 
+-- 150 挑選 產品名稱 包含 ku 的資料
+
+select * from Products
+
+where ProductName like '%ku%'
+ 
+ 
+-- 160 挑選 類別編號 (CategoryID) 為 1, 4, 8 的產品資料
+ 
+--     並依照 類別編號 和 產品名稱 排序
+
+select * from Products
+
+where CategoryID = 1 or CategoryID = 4 or CategoryID = 8
+
+order by CategoryID,ProductName
+ 
+select * from Products
+
+where CategoryID in (1,4,8) 
+
+order by CategoryID,ProductName
+
+-- 170 挑選 單價 介於 15 到 20 元之間(包含 15, 20)的產品資料
+ 
+--     並且按照 單價 由大到小排序
+
+select * from Products
+
+where UnitPrice between 15 and 20
+
+order by UnitPrice desc
+
+-- 340 那張訂單的總金額最高？
+
+select OrderID ,n as 'total' 
+
+from (select *,(UnitPrice*Quantity*Discount) as n 
+
+		from [Order Details]) as temp
+
+where n =(select max(n)
+
+from(select *,(UnitPrice*Quantity*Discount) as n 
+
+		from [Order Details]) as temp)
+
+-- 370 請提供 10274 這張訂單的詳細資訊
+
+select * 
+
+from [Order Details] left join Products
+
+	on [Order Details].ProductID = Products.ProductID 
+
+where OrderID = '10274'
+
+-- 420 請列出有訂第三類產品的訂單
+
+select OrderID ,CategoryID
+
+from [Order Details] left join Products
+
+	on [Order Details].ProductID = Products.ProductID 
+
+where CategoryID = '3'
+
+-- 440 有哪些產品是日商提供的?
+
+select ProductName,Country as 'vender'
+
+from Products left join Suppliers
+
+	on Products.SupplierID = Suppliers.SupplierID
+
+where Country = 'Japan'
+
+ -- 115 挑選 所有 產品資料，並用產品名稱排序
+
+select * from Products
+
+order by ProductName
+
+-- 120 挑選 指定欄位：ProductID, ProductName, UnitPrice
+
+select ProductID,ProductName,UnitPrice from Products
+ 
+
+
+-- 125 延續上題，在挑選資料時，請將欄位名稱改成以中文 產品編號, 產品名稱, 單價 顯示
+
+select ProductID as '產品編號',ProductName as '產品名稱',UnitPrice as '單價' 
+
+from Products
+ 
+ 
+-- 140 挑選 (庫存量+在途數)低於再訂購量 的產品資料
+
+select * from Products
+
+where (UnitsInStock+UnitsOnOrder) < ReorderLevel
+ 
+ 
+-- 150 挑選 產品名稱 包含 ku 的資料
+
+select * from Products
+
+where ProductName like '%ku%'
+ 
+ 
+-- 160 挑選 類別編號 (CategoryID) 為 1, 4, 8 的產品資料
+ 
+--     並依照 類別編號 和 產品名稱 排序
+
+select * from Products
+
+where CategoryID = 1 or CategoryID = 4 or CategoryID = 8
+
+order by CategoryID,ProductName
+ 
+select * from Products
+
+where CategoryID in (1,4,8) 
+
+order by CategoryID,ProductName
+
+-- 170 挑選 單價 介於 15 到 20 元之間(包含 15, 20)的產品資料
+ 
+--     並且按照 單價 由大到小排序
+
+select * from Products
+
+where UnitPrice between 15 and 20
+
+order by UnitPrice desc
+
+-- 340 那張訂單的總金額最高？
+
+select OrderID ,n as 'total' 
+
+from (select *,(UnitPrice*Quantity*Discount) as n 
+
+		from [Order Details]) as temp
+
+where n =(select max(n)
+
+from(select *,(UnitPrice*Quantity*Discount) as n 
+
+		from [Order Details]) as temp)
+
+-- 370 請提供 10274 這張訂單的詳細資訊
+
+select * 
+
+from [Order Details] left join Products
+
+	on [Order Details].ProductID = Products.ProductID 
+
+where OrderID = '10274'
+
+-------------------------------------------------
+
+select o.OrderID,o.CustomerID,o.EmployeeID from Orders o            where o.OrderID =10274
+select od.OrderID ,od.ProductID            from [Order Details]  od where od.OrderID=10274
+select e.EmployeeID ,e.FirstName           from Employees  e        where e.EmployeeID =6
+select p.ProductID,p.ProductID             from Products   p        where p.ProductID in (71,72)
+
+select o.OrderID,o.CustomerID ,e.EmployeeID ,e.FirstName ,p.ProductName  
+	from Orders o
+join [Order Details]  od on o.OrderID  = od.ProductID 
+join Employees e         on e.EmployeeID = e.FirstName  
+join Products p          on p.ProductID = p.ProductID  
+where o.OrderID = 10274
+-- 420 請列出有訂第三類產品的訂單
+
+select OrderID ,CategoryID
+
+from [Order Details] left join Products
+
+	on [Order Details].ProductID = Products.ProductID 
+
+where CategoryID = '3'
+
+
+
+-------------------------------------------------------
+--A
+
+select * from [Order Details]
+where ProductID in ( select ProductID from products where CategoryID = 3)
+
+--B
+select * 
+from [Order Details] as xx join products yy on xx.ProductID = yy.ProductID
+where yy.CategoryID =3
+
+-- 440 有哪些產品是日商提供的? sub query?
+
+select ProductName,Country as 'vender'
+
+from Products left join Suppliers
+
+	on Products.SupplierID = Suppliers.SupplierID
+
+where Country = 'Japan'
+
+-------------------------------------------------------
+ select * from Suppliers where Country = 'Japan'
+ --A
+ select * from Products join Suppliers 
+ on Products.SupplierID =Suppliers.SupplierID
+ where Suppliers.Country ='Japan'
+ --B
+  select * 
+  from Products
+  where SupplierID in (select SupplierID from Suppliers where Country = 'Japan')

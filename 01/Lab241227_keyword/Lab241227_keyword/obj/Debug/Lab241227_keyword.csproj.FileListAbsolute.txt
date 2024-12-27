@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\bin\Debug\Lab241227_keyword.exe.config
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\bin\Debug\Lab241227_keyword.exe
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\bin\Debug\Lab241227_keyword.pdb
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\obj\Debug\Lab241227_keyword.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\obj\Debug\Lab241227_keyword.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\obj\Debug\Lab241227_keyword.exe
+C:\Users\User\Desktop\01\Lab241227_keyword\Lab241227_keyword\obj\Debug\Lab241227_keyword.pdb
