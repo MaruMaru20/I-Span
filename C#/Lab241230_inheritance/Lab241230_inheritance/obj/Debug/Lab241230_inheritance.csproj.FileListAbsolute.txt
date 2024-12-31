@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\bin\Debug\Lab241230_inheritance.exe.config
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\bin\Debug\Lab241230_inheritance.exe
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\bin\Debug\Lab241230_inheritance.pdb
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\obj\Debug\Lab241230_inheritance.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\obj\Debug\Lab241230_inheritance.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\obj\Debug\Lab241230_inheritance.exe
+C:\Users\User\Desktop\01\Lab241230_inheritance\Lab241230_inheritance\obj\Debug\Lab241230_inheritance.pdb

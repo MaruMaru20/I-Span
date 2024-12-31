@@ -11,6 +11,7 @@
 Data Source=DESKTOP-AVM54SB\SQLEXPRESS;Integrated Security=True;Trust Server Certificate=True
 
 
+Data Source=DESKTOP-AVM54SB\SQLEXPRESS;Initial Catalog=AdventureWorksDW2022;Integrated Security=True;Trust Server Certificate=True
 
 -------------------------------------------------------------------------------------
 Teams

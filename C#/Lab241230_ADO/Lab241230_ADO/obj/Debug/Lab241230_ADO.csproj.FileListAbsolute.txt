@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\bin\Debug\Lab241230_ADO.exe.config
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\bin\Debug\Lab241230_ADO.exe
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\bin\Debug\Lab241230_ADO.pdb
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.Form1.resources
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.Properties.Resources.resources
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.csproj.GenerateResource.cache
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.exe
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.pdb
+C:\Users\User\Desktop\01\Lab241230_ADO\Lab241230_ADO\obj\Debug\Lab241230_ADO.Form2.resources
