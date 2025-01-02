@@ -26,7 +26,7 @@ namespace Day2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-AVM54SB\\SQLEXPRESS;Initial Catalog=AdventureWorksDW2022;Integ" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RM7I1O3\\SQLEXPRESS;Initial Catalog=AdventureWorksDW2022;Integ" +
             "rated Security=True;TrustServerCertificate=True")]
         public string AdventureWorksDW2022ConnectionString {
             get {
