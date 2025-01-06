@@ -81,6 +81,7 @@
             this.Ans.Name = "Ans";
             this.Ans.Size = new System.Drawing.Size(269, 274);
             this.Ans.TabIndex = 20;
+            this.Ans.TextChanged += new System.EventHandler(this.Ans_TextChanged);
             // 
             // dataGridView1
             // 

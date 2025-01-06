@@ -25,22 +25,32 @@ namespace Day5
         }
 
 
-        public DataTable GetDataTable(string sql, string tableName)
+        public DataTable GetDataTable(string sql, string View)
         {
             ds.Clear(); 
             adapter.SelectCommand = new SqlCommand(sql, conn);
 
-            adapter.Fill(ds, tableName);
+            adapter.Fill(ds, View);
 
-            return ds.Tables[tableName];
+            return ds.Tables[View];
         }
-        public void InsertDataTable(DataTable dt)
+        public int InsertDataTable(DataTable dt)
         {
-            SqlCommand xa = builder.GetInsertCommand();
-            adapter.SelectCommand = xa;
-            adapter.Update(dt);
+            builder = new SqlCommandBuilder(adapter);
+
+            SqlCommand insert_cmd = builder.GetInsertCommand();
+            adapter.InsertCommand = insert_cmd;
+
+            //SqlCommand update_cmd = builder.GetUpdateCommand();
+            //adapter.UpdateCommand = update_cmd;
+
+
+
             int temp = adapter.Update(dt);
-                return temp;
+
+            return temp;
+
+
         }
     }
 }

@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Data;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Day5
 {
     public partial class Form1 : Form
     {
-        private My_DB myDB;
-        DataTable dt;
+
         public Form1()
         {
             InitializeComponent();
-            myDB = new My_DB();
+            
 
         }
-
+        My_DB myDB = new My_DB();
+        DataTable dt;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -28,9 +29,7 @@ namespace Day5
 
             dataGridView1.DataSource = dt;
 
-            dataGridView1.Columns[0].HeaderText = "Currency Key";
-            dataGridView1.Columns[1].HeaderText = "Currency Alternate Key";
-            dataGridView1.Columns[2].HeaderText = "Currency Name";
+
         }
 
         private void EXPT_Click(object sender, EventArgs e)
@@ -42,19 +41,25 @@ namespace Day5
 
         private void UPDATE_Click(object sender, EventArgs e)
         {
-            My_DB newyourself = new My_DB();
+            string sql = "select * from DimCurrency";
+            dt = myDB.GetDataTable(sql, "DimCurrency");
 
-            DataRow row = dt.NewRow(); 
+            DataRow row = dt.NewRow();
             row["CurrencyKey"] = 106;
-            row["CurrencyAlternateKey"] = "ZZZ";
-            row["CurrencyName"] = "newyourself";
+            row["CurrencyAlternateKey"] = "XGY";
+            row["CurrencyName"] = "Pikachu";
             dt.Rows.Add(row);
 
-            newyourself.InsertDataTable(dt);
+            myDB.InsertDataTable(dt);
         }
         private void UPself_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void Ans_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

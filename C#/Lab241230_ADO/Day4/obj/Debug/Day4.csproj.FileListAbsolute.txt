@@ -9,3 +9,14 @@ E:\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.csproj.CoreCompileInputs.cache
 E:\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.exe
 E:\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.pdb
 E:\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.Form3_updates.resources
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\bin\Debug\Day4.exe.config
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\bin\Debug\Day4.exe
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\bin\Debug\Day4.pdb
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.csproj.AssemblyReference.cache
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.Form1_pages.resources
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.Form3_updates.resources
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.Properties.Resources.resources
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.csproj.GenerateResource.cache
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.csproj.CoreCompileInputs.cache
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.exe
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day4\obj\Debug\Day4.pdb

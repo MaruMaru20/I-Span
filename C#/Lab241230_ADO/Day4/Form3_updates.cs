@@ -114,11 +114,10 @@ namespace Day4
         {
 
             string selectfrom = "DimCurrency";
-            string Sql = $"UPDATE DimCurrency" +
-                $"SET CurrencyAlternateKey =@x1, " +
-                $"CurrencyName =@x2 " +
-                $"Where CurrencyKey = @x3 ";
-            adapter.UpdateCommand = new SqlCommand(Sql, conn);
+
+            string sql = $"update DimCurrency set CurrencyAlternateKey=@x1,CurrencyName=@x2 where CurrencyKey = @x3";
+            adapter.UpdateCommand = new SqlCommand(sql, conn);
+
             adapter.UpdateCommand.Parameters.AddWithValue("@x1", SQL_select_from.Text);
             adapter.UpdateCommand.Parameters.AddWithValue("@x2", SQL_Key.Text);
             adapter.UpdateCommand.Parameters.AddWithValue("@x3", SQL_Name.Text);
