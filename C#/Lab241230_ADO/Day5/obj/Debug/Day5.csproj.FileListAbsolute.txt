@@ -1,0 +1,10 @@
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.csproj.AssemblyReference.cache
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.Form1.resources
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.Properties.Resources.resources
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.csproj.GenerateResource.cache
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.csproj.CoreCompileInputs.cache
+E:\I-Span\C#\Lab241230_ADO\Day5\bin\Debug\Day5.exe.config
+E:\I-Span\C#\Lab241230_ADO\Day5\bin\Debug\Day5.exe
+E:\I-Span\C#\Lab241230_ADO\Day5\bin\Debug\Day5.pdb
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.exe
+E:\I-Span\C#\Lab241230_ADO\Day5\obj\Debug\Day5.pdb

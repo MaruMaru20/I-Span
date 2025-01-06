@@ -37,6 +37,7 @@
             this.Read = new System.Windows.Forms.Button();
             this.Ans = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.UpdateSelf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.SQL_Name.Name = "SQL_Name";
             this.SQL_Name.Size = new System.Drawing.Size(425, 39);
             this.SQL_Name.TabIndex = 13;
+            this.SQL_Name.TextChanged += new System.EventHandler(this.SQL_Name_TextChanged);
             // 
             // SQL_Key
             // 
@@ -67,6 +69,7 @@
             this.SQL_Key.Name = "SQL_Key";
             this.SQL_Key.Size = new System.Drawing.Size(100, 39);
             this.SQL_Key.TabIndex = 12;
+            this.SQL_Key.TextChanged += new System.EventHandler(this.SQL_Key_TextChanged);
             // 
             // SQL_select_from
             // 
@@ -123,7 +126,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("新細明體", 14F);
-            this.button1.Location = new System.Drawing.Point(598, 32);
+            this.button1.Location = new System.Drawing.Point(373, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 50);
             this.button1.TabIndex = 16;
@@ -131,12 +134,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // UpdateSelf
+            // 
+            this.UpdateSelf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateSelf.Font = new System.Drawing.Font("新細明體", 14F);
+            this.UpdateSelf.Location = new System.Drawing.Point(476, 32);
+            this.UpdateSelf.Name = "UpdateSelf";
+            this.UpdateSelf.Size = new System.Drawing.Size(97, 50);
+            this.UpdateSelf.TabIndex = 17;
+            this.UpdateSelf.Text = "UpdateSelf";
+            this.UpdateSelf.UseVisualStyleBackColor = true;
+            this.UpdateSelf.Click += new System.EventHandler(this.UpdateSelf_Click);
+            // 
             // Form3_updates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(707, 442);
+            this.Controls.Add(this.UpdateSelf);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Ans);
             this.Controls.Add(this.dataGridView1);
@@ -148,6 +164,7 @@
             this.Controls.Add(this.Read);
             this.Name = "Form3_updates";
             this.Text = "Form3_updates";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_updates_FormClosing);
             this.Load += new System.EventHandler(this.Form3_updates_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -165,5 +182,6 @@
         private System.Windows.Forms.Button Read;
         private System.Windows.Forms.TextBox Ans;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UpdateSelf;
     }
 }
