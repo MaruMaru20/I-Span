@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241230_ADO\\",
+  "WorkspaceRootPath": "E:\\I-Span\\C#\\Lab241230_ADO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1ED8BD0-DD4A-4EAA-859B-16C74DBEDEBD}|Day4\\Day4.csproj|c:\\users\\silence\\desktop\\lab_codes\\i-span\\c#\\lab241230_ado\\day4\\form3_updates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1ED8BD0-DD4A-4EAA-859B-16C74DBEDEBD}|Day4\\Day4.csproj|solutionrelative:day4\\form3_updates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28E009F9-238A-4985-BB72-FE1AF25CCE8C}|Day6\\Day6.csproj|e:\\i-span\\c#\\lab241230_ado\\day6\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28E009F9-238A-4985-BB72-FE1AF25CCE8C}|Day6\\Day6.csproj|solutionrelative:day6\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1ED8BD0-DD4A-4EAA-859B-16C74DBEDEBD}|Day4\\Day4.csproj|c:\\users\\silence\\desktop\\lab_codes\\i-span\\c#\\lab241230_ado\\day4\\form3_updates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1ED8BD0-DD4A-4EAA-859B-16C74DBEDEBD}|Day4\\Day4.csproj|solutionrelative:day4\\form3_updates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{28E009F9-238A-4985-BB72-FE1AF25CCE8C}|Day6\\Day6.csproj|e:\\i-span\\c#\\lab241230_ado\\day6\\mydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28E009F9-238A-4985-BB72-FE1AF25CCE8C}|Day6\\Day6.csproj|solutionrelative:day6\\mydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|e:\\i-span\\c#\\lab241230_ado\\day5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|solutionrelative:day5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|e:\\i-span\\c#\\lab241230_ado\\day5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|solutionrelative:day5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28E009F9-238A-4985-BB72-FE1AF25CCE8C}|Day6\\Day6.csproj|e:\\i-span\\c#\\lab241230_ado\\day6\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{28E009F9-238A-4985-BB72-FE1AF25CCE8C}|Day6\\Day6.csproj|solutionrelative:day6\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form3_updates.cs",
-              "DocumentMoniker": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241230_ADO\\Day4\\Form3_updates.cs",
-              "RelativeDocumentMoniker": "Day4\\Form3_updates.cs",
-              "ToolTip": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241230_ADO\\Day4\\Form3_updates.cs",
-              "RelativeToolTip": "Day4\\Form3_updates.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAYwHMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "E:\\I-Span\\C#\\Lab241230_ADO\\Day6\\Form1.cs",
+              "RelativeDocumentMoniker": "Day6\\Form1.cs",
+              "ToolTip": "E:\\I-Span\\C#\\Lab241230_ADO\\Day6\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Day6\\Form1.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T12:00:20.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T01:47:07.927Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form3_updates.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241230_ADO\\Day4\\Form3_updates.cs",
-              "RelativeDocumentMoniker": "Day4\\Form3_updates.cs",
-              "ToolTip": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241230_ADO\\Day4\\Form3_updates.cs [\u8A2D\u8A08]",
-              "RelativeToolTip": "Day4\\Form3_updates.cs [\u8A2D\u8A08]",
+              "Title": "MyDB.cs",
+              "DocumentMoniker": "E:\\I-Span\\C#\\Lab241230_ADO\\Day6\\MyDB.cs",
+              "RelativeDocumentMoniker": "Day6\\MyDB.cs",
+              "ToolTip": "E:\\I-Span\\C#\\Lab241230_ADO\\Day6\\MyDB.cs",
+              "RelativeToolTip": "Day6\\MyDB.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAABDwCYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T12:00:06.939Z",
+              "WhenOpened": "2025-01-07T02:15:52.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\I-Span\\C#\\Lab241230_ADO\\Day6\\Form1.cs",
+              "RelativeDocumentMoniker": "Day6\\Form1.cs",
+              "ToolTip": "E:\\I-Span\\C#\\Lab241230_ADO\\Day6\\Form1.cs",
+              "RelativeToolTip": "Day6\\Form1.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAA+wD0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T02:02:32.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "E:\\I-Span\\C#\\Lab241230_ADO\\Day5\\Form1.cs",
+              "RelativeDocumentMoniker": "Day5\\Form1.cs",
+              "ToolTip": "E:\\I-Span\\C#\\Lab241230_ADO\\Day5\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Day5\\Form1.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T03:53:43.13Z",
               "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\I-Span\\C#\\Lab241230_ADO\\Day5\\Form1.cs",
+              "RelativeDocumentMoniker": "Day5\\Form1.cs",
+              "ToolTip": "E:\\I-Span\\C#\\Lab241230_ADO\\Day5\\Form1.cs",
+              "RelativeToolTip": "Day5\\Form1.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAIA3wBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T03:55:38.315Z",
+              "EditorCaption": ""
             }
           ]
         }

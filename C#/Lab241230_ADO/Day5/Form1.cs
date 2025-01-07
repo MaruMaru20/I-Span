@@ -47,7 +47,7 @@ namespace Day5
             DataRow row = dt.NewRow();
             row["CurrencyKey"] = 106;
             row["CurrencyAlternateKey"] = "XGY";
-            row["CurrencyName"] = "Pikachu";
+            row["CurrencyName"] = "SharkJ";
             dt.Rows.Add(row);
 
             myDB.InsertDataTable(dt);
