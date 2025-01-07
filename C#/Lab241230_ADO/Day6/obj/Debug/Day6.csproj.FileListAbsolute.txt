@@ -8,3 +8,13 @@ E:\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.csproj.GenerateResource.cache
 E:\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.csproj.CoreCompileInputs.cache
 E:\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.exe
 E:\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.pdb
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.csproj.AssemblyReference.cache
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.Form1.resources
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.Properties.Resources.resources
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.csproj.GenerateResource.cache
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.csproj.CoreCompileInputs.cache
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.exe
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\obj\Debug\Day6.pdb
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\bin\Debug\Day6.exe.config
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\bin\Debug\Day6.exe
+C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day6\bin\Debug\Day6.pdb

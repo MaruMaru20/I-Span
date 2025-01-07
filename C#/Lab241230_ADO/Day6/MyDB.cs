@@ -31,12 +31,36 @@ namespace Day6
             adapter.Fill(ds, Viwer);
             return ds.Tables[Viwer];
         }
-        public void InsertDataTable(string sql, string[] Key, string[] Values)
+        public MyDB(string connect)
         {
-             //string sql = @"INSERT INTO DimCurrency
-             //           (CurrencyAlternateKey,CurrencyName)
-             //           VALUES
-             //           (@p1,@p2)";
+            conn =new SqlConnection(connect);
+            adapter = new SqlDataAdapter();
+            builder = new SqlCommandBuilder(adapter);
+            ds = new DataSet();
+        }
+        public void TestConnection()
+        {
+            using (SqlConnection conn = new SqlConnection(this.conn.ConnectionString))
+            {
+                conn.Open();  // 嘗試打開連線
+            }
+        }
+        public bool InsertDataTable(string sql, string[] Key, string[] Values)
+        {
+            {
+                adapter.InsertCommand = new SqlCommand(sql, conn);
+                for (int i = 0; i < Key.Length; i++)
+                {
+                    adapter.InsertCommand.Parameters.AddWithValue(Key[i], Values[i]);
+                }
+
+                conn.Open();
+                int xa = adapter.InsertCommand.ExecuteNonQuery();
+                conn.Close();
+
+                
+                return xa > 0;
+            }
         }
     }
 }

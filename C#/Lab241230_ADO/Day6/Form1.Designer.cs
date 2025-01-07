@@ -37,6 +37,8 @@
             this.EXPT = new System.Windows.Forms.Button();
             this.UPDATE = new System.Windows.Forms.Button();
             this.Read = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +88,7 @@
             this.CurrencyAlternateKey.Name = "CurrencyAlternateKey";
             this.CurrencyAlternateKey.Size = new System.Drawing.Size(100, 39);
             this.CurrencyAlternateKey.TabIndex = 26;
+            this.CurrencyAlternateKey.TextChanged += new System.EventHandler(this.CurrencyAlternateKey_TextChanged);
             // 
             // CurrencyKey
             // 
@@ -116,6 +119,7 @@
             this.UPDATE.TabIndex = 23;
             this.UPDATE.Text = "UPDATE";
             this.UPDATE.UseVisualStyleBackColor = true;
+            this.UPDATE.Click += new System.EventHandler(this.UPDATE_Click);
             // 
             // Read
             // 
@@ -128,12 +132,35 @@
             this.Read.UseVisualStyleBackColor = true;
             this.Read.Click += new System.EventHandler(this.Read_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("新細明體", 14F);
+            this.textBox1.Location = new System.Drawing.Point(563, 21);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(169, 39);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("新細明體", 14F);
+            this.button1.Location = new System.Drawing.Point(680, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 28);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "EXPT.";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.Ans);
             this.Controls.Add(this.dataGridView1);
@@ -163,6 +190,8 @@
         private System.Windows.Forms.Button EXPT;
         private System.Windows.Forms.Button UPDATE;
         private System.Windows.Forms.Button Read;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
