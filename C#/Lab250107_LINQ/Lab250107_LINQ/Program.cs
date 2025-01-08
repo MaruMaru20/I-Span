@@ -16,7 +16,7 @@ namespace Lab250107_LINQ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form3arror_fuction());
+            Application.Run(new Form5_interface());
         }
     }
 }

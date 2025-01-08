@@ -52,6 +52,12 @@
     <Compile Include="Form1_Generic .Designer.cs">
       <DependentUpon>Form1_Generic .cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4_first_SelectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4_first_SelectData.Designer.cs">
+      <DependentUpon>Form4_first_SelectData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2_NewKeyworld.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,16 +70,66 @@
     <Compile Include="Form3arror_fuction.Designer.cs">
       <DependentUpon>Form3arror_fuction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5_interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_interface.Designer.cs">
+      <DependentUpon>Form5_interface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6_LINQ_from_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6_LINQ_from_select.Designer.cs">
+      <DependentUpon>Form6_LINQ_from_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7LINQ_where.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7LINQ_where.Designer.cs">
+      <DependentUpon>Form7LINQ_where.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8_Lambda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8_Lambda.Designer.cs">
+      <DependentUpon>Form8_Lambda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9_Lambda_where.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9_Lambda_where.Designer.cs">
+      <DependentUpon>Form9_Lambda_where.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inheritance.cs" />
+    <Compile Include="Interface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1_Generic .resx">
       <DependentUpon>Form1_Generic .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4_first_SelectData.resx">
+      <DependentUpon>Form4_first_SelectData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2_NewKeyworld.resx">
       <DependentUpon>Form2_NewKeyworld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3arror_fuction.resx">
       <DependentUpon>Form3arror_fuction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5_interface.resx">
+      <DependentUpon>Form5_interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6_LINQ_from_select.resx">
+      <DependentUpon>Form6_LINQ_from_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7LINQ_where.resx">
+      <DependentUpon>Form7LINQ_where.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8_Lambda.resx">
+      <DependentUpon>Form8_Lambda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9_Lambda_where.resx">
+      <DependentUpon>Form9_Lambda_where.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

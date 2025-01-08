@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\I-Span\\01\\Lab241227_keyword\\",
+  "WorkspaceRootPath": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241227_keyword\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CB54BCD-FB18-4CC4-AF01-A1FA2E1C0E82}|Lab241227_keyword\\Lab241227_keyword.csproj|d:\\i-span\\01\\lab241227_keyword\\lab241227_keyword\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9CB54BCD-FB18-4CC4-AF01-A1FA2E1C0E82}|Lab241227_keyword\\Lab241227_keyword.csproj|c:\\users\\silence\\desktop\\lab_codes\\i-span\\c#\\lab241227_keyword\\lab241227_keyword\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB54BCD-FB18-4CC4-AF01-A1FA2E1C0E82}|Lab241227_keyword\\Lab241227_keyword.csproj|solutionrelative:lab241227_keyword\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB54BCD-FB18-4CC4-AF01-A1FA2E1C0E82}|Lab241227_keyword\\Lab241227_keyword.csproj|c:\\users\\silence\\desktop\\lab_codes\\i-span\\c#\\lab241227_keyword\\lab241227_keyword\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CB54BCD-FB18-4CC4-AF01-A1FA2E1C0E82}|Lab241227_keyword\\Lab241227_keyword.csproj|solutionrelative:lab241227_keyword\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241227_keyword\\Lab241227_keyword\\Member.cs",
+              "RelativeDocumentMoniker": "Lab241227_keyword\\Member.cs",
+              "ToolTip": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241227_keyword\\Lab241227_keyword\\Member.cs",
+              "RelativeToolTip": "Lab241227_keyword\\Member.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T10:22:10.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\I-Span\\01\\Lab241227_keyword\\Lab241227_keyword\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241227_keyword\\Lab241227_keyword\\Program.cs",
               "RelativeDocumentMoniker": "Lab241227_keyword\\Program.cs",
-              "ToolTip": "D:\\I-Span\\01\\Lab241227_keyword\\Lab241227_keyword\\Program.cs",
+              "ToolTip": "C:\\Users\\Silence\\Desktop\\lab_codes\\I-Span\\C#\\Lab241227_keyword\\Lab241227_keyword\\Program.cs",
               "RelativeToolTip": "Lab241227_keyword\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwCcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T06:16:42.95Z",
               "EditorCaption": ""
