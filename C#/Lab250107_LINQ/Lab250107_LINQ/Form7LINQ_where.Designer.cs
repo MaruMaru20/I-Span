@@ -210,6 +210,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Form7LINQ_where";
             this.Text = "Form7LINQ_where";
+            this.Load += new System.EventHandler(this.Form7LINQ_where_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,7 +16,7 @@ namespace Day2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form4_where());
+            Application.Run(new Form2_DGV());
         }
     }
 }

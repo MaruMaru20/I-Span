@@ -24,3 +24,16 @@ C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.c
 C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.csproj.CoreCompileInputs.cache
 C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.exe
 C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.pdb
+E:\I-Span\C#\Lab241230_ADO\Day2\bin\Debug\Day2.exe.config
+E:\I-Span\C#\Lab241230_ADO\Day2\bin\Debug\Day2.exe
+E:\I-Span\C#\Lab241230_ADO\Day2\bin\Debug\Day2.pdb
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.csproj.AssemblyReference.cache
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.Form1.resources
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.Form2_DGV.resources
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.Form3_sqlConncetion.resources
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.Form4_where.resources
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.Properties.Resources.resources
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.csproj.GenerateResource.cache
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.csproj.CoreCompileInputs.cache
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.exe
+E:\I-Span\C#\Lab241230_ADO\Day2\obj\Debug\Day2.pdb

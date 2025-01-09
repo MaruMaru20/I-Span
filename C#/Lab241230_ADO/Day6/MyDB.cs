@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Day6
 {
 
-    internal class MyDB
+    public class MyDB
     {
         private SqlCommandBuilder builder { get; set; }
         private SqlConnection conn;
@@ -62,6 +62,8 @@ namespace Day6
                 return xa > 0;
             }
         }
+       
+         
     }
 }
 

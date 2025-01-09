@@ -25,11 +25,12 @@ namespace Day6
             InitializeComponent();
         }
         MyDB myDB = new MyDB();
-        DataTable dt;
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
             CurrencyKey.Enabled = false;
+
         }
 
         private void Read_Click(object sender, EventArgs e)
@@ -41,8 +42,19 @@ namespace Day6
             string selectfrom = "DimCurrency";
             string keyzone = "CurrencyKey";
             string sql = $"SELECT * FROM {selectfrom} ORDER BY {keyzone} OFFSET {(page - 1) * pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY ";
-            dataGridView1.DataSource = myDB.GetDataTable(sql, "Viewer");
-            
+            DataTable dt = myDB.GetDataTable(sql, "Viewer");
+
+            dataGridView1.DataSource = dt;
+
+
+            //資料繫結
+            CurrencyKey.DataBindings.Clear();
+            CurrencyAlternateKey.DataBindings.Clear();
+            CurrencyName.DataBindings.Clear();
+
+            CurrencyKey.DataBindings.Add("Text", dt, "CurrencyKey");  
+            CurrencyAlternateKey.DataBindings.Add("Text", dt, "CurrencyAlternateKey");
+            CurrencyName.DataBindings.Add("Text", dt, "CurrencyName");
 
 
 
@@ -70,6 +82,7 @@ namespace Day6
             {
                 Ans.Text = dt.Rows[0]["CurrencyAlternateKey"].ToString();
                 MessageBox.Show($"已存在名稱:{Key}");
+                Read_Click(sender, e);
                 return;
 
             }
@@ -157,7 +170,7 @@ namespace Day6
             {
 
                 Ans.Text = dt.Rows[0]["CurrencyAlternateKey"].ToString();
-                DialogResult result = MessageBox.Show($"您确定要删除 CurrencyAlternateKey: {Key} ？",
+                DialogResult result = MessageBox.Show($"確定刪除 CurrencyAlternateKey: {Key} ？",
                                           "確認",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)

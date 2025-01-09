@@ -70,5 +70,10 @@ namespace Lab250107_LINQ
             var xb = from abc in xa where Myfun(abc) select abc;
             textBox6.Text += string.Join(",", xb);
         }
+
+        private void Form7LINQ_where_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

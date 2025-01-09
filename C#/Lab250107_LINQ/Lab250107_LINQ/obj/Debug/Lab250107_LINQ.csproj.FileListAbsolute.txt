@@ -45,3 +45,5 @@ C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab250107_LINQ\Lab250107_LINQ\obj\D
 C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab250107_LINQ\Lab250107_LINQ\bin\Debug\Lab250107_LINQ.exe.config
 C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab250107_LINQ\Lab250107_LINQ\bin\Debug\Lab250107_LINQ.exe
 C:\Users\Silence\Desktop\lab_codes\I-Span\C#\Lab250107_LINQ\Lab250107_LINQ\bin\Debug\Lab250107_LINQ.pdb
+E:\I-Span\C#\Lab250107_LINQ\Lab250107_LINQ\obj\Debug\Lab250107_LINQ.Form10_review.resources
+E:\I-Span\C#\Lab250107_LINQ\Lab250107_LINQ\obj\Debug\Lab250107_LINQ.Form11_ArrayList_TaskDelay.resources

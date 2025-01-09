@@ -33,5 +33,27 @@ namespace Lab250107_LINQ.Properties {
                 return ((string)(this["DW2022"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-AVM54SB\\SQLEXPRESS;Initial Catalog=AdventureWorksDW2022;Integ" +
+            "rated Security=True;Encrypt=True;TrustServerCertificate=True")]
+        public string AdventureWorksDW2022ConnectionString {
+            get {
+                return ((string)(this["AdventureWorksDW2022ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-AVM54SB\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Secur" +
+            "ity=True;TrustServerCertificate=True")]
+        public string NorthwindConnectionString {
+            get {
+                return ((string)(this["NorthwindConnectionString"]));
+            }
+        }
     }
 }

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form10_review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10_review.Designer.cs">
+      <DependentUpon>Form10_review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11_ArrayList_TaskDelay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11_ArrayList_TaskDelay.Designer.cs">
+      <DependentUpon>Form11_ArrayList_TaskDelay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1_Generic .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,8 +115,19 @@
     </Compile>
     <Compile Include="Inheritance.cs" />
     <Compile Include="Interface.cs" />
+    <Compile Include="MyDataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form10_review.resx">
+      <DependentUpon>Form10_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11_ArrayList_TaskDelay.resx">
+      <DependentUpon>Form11_ArrayList_TaskDelay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1_Generic .resx">
       <DependentUpon>Form1_Generic .cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +164,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="MyDataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyDataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDataClasses1.dbml.layout">
+      <DependentUpon>MyDataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
