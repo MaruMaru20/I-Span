@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#btnTry").click(function () {
+          // 在這裏寫程式
+
+          //基本語法 先定位再採去動作
+          // 01.
+          // $("#report").text("OK"); // $("選取器").採取動作()
+
+
+          // 02.
+          // var x = $("#report").text("line1<br>line2<br>");
+          // alert(x);
+
+
+          // 03. 元素差異 .text  .html方法差別
+          // $("#report").text("line1<br>line2<br>");  //單純是文字
+          // $("#report").html("line1<br>line2<br>");  //html格式 br會被運用
+
+
+          // 04.
+          // $("#report").html("line1<br>line2<br>"); 
+          // $("#report").append("line1<br>line2<br>");  //既有內容不動每次點擊增加內容進去
+          
+          
+          // 05.
+          // $("#aTextField").prop("value", "abc");   //點擊後會隨設定的內容改變
+          // var x = $("#aTextField").prop("Value");  //初始值不會變 == 只讀資料
+          // alert(x);
+
+
+          //06.  Q: attr 改用  prop  差異在哪?       A: attr有bug 盡量用prop
+          // 請參考attr crop.jpg
+
+                   //input有很多 需要設定[條件].eq(第3個).attr("屬性", "新內容")
+          var s = $("input[name='radioGroup']").eq(2).prop("checked", "checked");
+          $("#report").append("radio C selected.");
+
+
+
+          // END
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="report">Report:<br /></div>
+
+    <hr />
+
+    <form action="" method="put" onsubmit="return false;">
+      <div>
+        <label>Text:</label>
+        <input type="text" id="aTextField" name="someTextField"  Value="123"/> <!-- Value="123" -->
+      </div>
+      <div>
+        <label>Radio group:</label>
+        <input type="radio" name="radioGroup" id="radioA" value="65" /> A
+        <input
+          type="radio"
+          name="radioGroup"
+          id="radioB"
+          value="66"
+          checked="checked"
+        />
+        B <input type="radio" name="radioGroup" id="radioC" value="67" /> C
+      </div>
+      <div>
+        <label>Checkboxes:</label>
+        <input type="checkbox" name="checkboxes" id="checkbox1" value="1" /> 1
+        <input type="checkbox" name="checkboxes" id="checkbox2" value="2" /> 2
+        <input
+          type="checkbox"
+          name="checkboxes"
+          id="checkbox3"
+          value="3"
+          checked="checked"
+        />
+        3 <input type="checkbox" name="checkboxes" id="checkbox4" value="4" /> 4
+      </div>
+      <button type="button" id="btnTry">Try</button>
+    </form>
+  </body>
+</html>

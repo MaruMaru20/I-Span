@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnTry").click(function () {
+              // 用JQuery改CSS
+              // 在這裏寫程式
+              //01.套用類別
+              // $("#betaRibbon").addClass("beta-ribbon");
+
+              //02.移除類別
+              // $("#betaRibbon").removeClass("beta-ribbon");
+
+              //03.切換類別
+              // $("#betaRibbon").toggleClass("beta-ribbon");
+              //CSS設定 單一
+              // $("#report").css("font-size", "4em");
+              //查詢
+              // var x = $("#report").css("font-size");
+              // alert(x);
+              //CSS設定 多種
+              // $("#report").css("font-size", "4em").css("font-style", "italic");
+              //用物件來定義 {}
+              // $("#report").css({"font-size": "4em","font-style": "italic"});
+
+
+                
+                //END
+                
+                
+                
+                
+            })
+        });
+        
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+<div class="beta-ribbon-wrapper">
+  <div id="betaRibbon" > <!-- class="classA classB beta-ribbon" -->
+    <a href="/about/#beta">Beta</a>
+  </div>
+</div>
+
+<div id="report">Report:<br></div>
+<hr>
+<form action="" method="put" onsubmit="return false;">
+  <button type="button" id="btnTry">Try</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" >
+
+        function console(obj)
+        {
+            $("#report").append(obj + "<br>");
+        }
+        //02.載完全部檔案再繼續執行
+        $(document).ready(function () {
+            // 在這裏寫程式
+            
+            $("#btnTry").on("click",() => {console("333");});
+            $("#panda").on("mouseenter",() => {$("#panda").prop("src","panda2.jpg");});
+            $("#panda").on("mouseleave",() => {$("#panda").prop("src","panda1.jpg");});
+            $("#btnOff").click(() => {$("#panda").off("mouseover");$("#panda").off("mouseout");});
+            
+            
+            
+
+            
+            
+        });
+
+        // $("#btnTry").on("click",() => {alert("333");});  為何不會顯示 >> 因為次序錯誤
+    </script>
+
+</head>
+<body>
+
+<img id="panda" src="panda1.jpg">
+
+<div id="report">Report:<br></div>
+<hr>
+<form action="" method="put" onsubmit="return false;">
+  <button type="button" id="btnTry">Try</button>
+  <button type="button" id="btnOff">Off</button>
+</form>
+</body>
+<script>
+
+//01. 本來就載入完成 所以不用ready
+
+// $("#btnTry").mouseleave(() => {alert("fine");});
+// $("#btnTry").on("click",() => {alert("fine2");});
+// $("#btnTry").on("click",() => {alert("fine3");});
+// $("#btnOff").on("click",() => 
+//      {
+//         $("#btnTry").off("click");
+//         $("#btnTry").on("click",() =>{alert("Done")}); //並不是再把按鈕打開
+
+//     ;});
+// document.getElementById("btnTry").onclick = function() {
+//     alert("OK");
+// }
+
+// btnTry.onclick = () => {alert("OK2")};
+
+</script>
+</html>
