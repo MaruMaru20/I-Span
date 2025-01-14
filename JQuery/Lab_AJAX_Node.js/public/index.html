@@ -126,28 +126,55 @@
 
 
             $("#getButton").on("click", function() {
-                var s = $("#nameTextBox").val();
+                var s = $("#nameTextBox").val();  //prop("value")
 
+                
 
+                $.get("/hello/" +s, (e)=>{
+                    $("#reportSpan").text(e);
+                })
 
-
-
-                $("#reportSpan").text(s);
+                // $("#reportSpan").text(url);
             })
 
+ 
 
-
-            $("#postButton").on("click", function() {
+            $("#postButton").on("click",async function() {  //async for await
                 var dataToServer = {
                     firstName: $("#firstNameTextBox").val(),
                     lastName: $("#lastNameTextBox").val()
                 }
+                
+                // $.post("/test",dataToServer ,(e)=>{
+                //     $("#resultSpan").text(e);
+                // })
+
+                // $.ajax({
+                //     type: "post",
+                //     url:"http://localhost/test",
+                //     data: dataToServer,
+                //     success: (e)=>{ $("#resultSpan").text(e)}
+                // }) ; //CRUD = POST,GET,PUT,DELETE
 
 
-
-
-                $("#resultSpan").text(JSON.stringify(dataToServer));
+                var p = await $.ajax({
+                    type: "post", //CRUD = POST,GET,PUT,DELETE
+                    
+                    url:"http://localhost/test2",
+                    // contentType:"application/json",    //2-1.清楚表明 JSON
+                    // data: JSON.stringify(dataToServer) //2.找不到編碼(解析失敗)
+                    // data: dataToServer
+                    // success: (e)=>{ $("#resultSpan").text(e)}  //#01 不推薦寫法
+                    //#3
+                    headers: {"prefix":"Mr",
+                    "contentType":"application/json"},
+                    data: JSON.stringify(dataToServer),
+                }) ; 
+                
+                $("#resultSpan").text(p);
+                // $("#resultSpan").text(JSON.stringify(dataToServer));
             })
+
 
 
 

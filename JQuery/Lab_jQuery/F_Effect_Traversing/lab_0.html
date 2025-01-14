@@ -95,9 +95,9 @@ $(function () {
 
 var List = ["Dog","Cat","Rabbit"];
 
-$(".pet").each((x)=> {alert(x);});
+// $(".pet").each((x)=> {alert(x);});
 
-// $(".pet").each((i,Img)=> {$(Img).data("species",List[i]);});
+$(".pet").each((i,Img)=> {$(Img).data("species",List[i]);});
 
 // for (var i = 0; i < List.length; i++) {
 //     $(".pet").eq(i).data("species", List[i]);

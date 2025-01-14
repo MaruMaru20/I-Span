@@ -56,7 +56,7 @@ function MakeRequestAsync()
  
   xmlHttp.onreadystatechange = function()
   {
-    if(xmlHttp.readyState == 4)
+    if(xmlHttp.readyState == 4)  //連線 接收 資接收中 接收完畢
     {
       HandleResponse(xmlHttp.responseText);
     }
