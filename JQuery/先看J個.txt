@@ -1,4 +1,5 @@
 目的:用JQuery存取網頁的內容
+
 課程內容:
 前置作業:
 參考Lab_ToDoList>>>>_LabSteps.txt
@@ -26,6 +27,5 @@ C_CSS
 .css()
 
 D_Lab_Events
-綁定 
-
-與執行次序
+綁定與執行次序
+.ready()
