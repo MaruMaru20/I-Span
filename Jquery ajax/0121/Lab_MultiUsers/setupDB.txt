@@ -1,0 +1,25 @@
+CREATE DATABASE todoItemDb
+GO
+
+USE todoItemDb
+GO
+
+CREATE TABLE [dbo].[TodoItems](
+	[TodoItemId] [bigint] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[IsComplete] [bit] NOT NULL,
+ CONSTRAINT [PK_TodoItems] PRIMARY KEY CLUSTERED 
+(
+	[TodoItemId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[TodoItems] ADD  DEFAULT (CONVERT([bit],(0))) FOR [IsComplete]
+GO
+
+INSERT INTO TodoItems (Name, IsComplete) VALUES ('Job A', 0)
+GO
+
+SELECT * FROM TodoItems
+GO
